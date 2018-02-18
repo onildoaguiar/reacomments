@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from '../imgs/logo.svg';
+import logo from '../resources/images/logo.svg';
 
 class ReactHeader extends Component {
     render() {

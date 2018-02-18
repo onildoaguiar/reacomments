@@ -2,11 +2,6 @@ import React, { Component } from 'react';
 
 class NewComment extends Component {
 
-    /*
-    constructor(props) {
-        super(props);
-    }*/
-
     handleEnter(event) {
         if (event.keyCode === 13) {
             event.preventDefault();

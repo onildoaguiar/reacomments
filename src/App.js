@@ -6,26 +6,24 @@ import NewComment from './components/NewComment';
 import ReactHeader from './components/ReactHeader';
 import Comments from './components/Comments';
 
-import base from './base';
-
 class App extends Component {
 
   constructor(props) {
     super(props);
 
     this.state = {
-      comments: {}
+      comments: []
     }
 
-    this.refComments = base.syncState('comments', {
+    this.refComments = this.props.base.syncState('comments', {
       context: this,
       state: 'comments'
     })
   }
 
   postNewComment(comment) {
-    const comments = { ...this.state.comments };
-    comments[comment.id] = comment;
+    const comments = this.state.comments;
+    comments.push(comment)
 
     this.setState({ comments })
   }
