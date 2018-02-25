@@ -1,6 +1,6 @@
 {
-  "name": "comments-react",
-  "homepage": "http://onildoaguiar.github.io/comments-react",
+  "name": "reacomments",
+  "homepage": "http://onildoaguiar.github.io/",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -14,11 +14,11 @@
   },
   "dependencies": {
     "bootstrap-css-only": "^3.3.7",
-    "firebase": "^4.6.2",
+    "firebase": "^4.10.1",
     "re-base": "^3.2.0",
-    "react": "^16.1.1",
-    "react-dom": "^16.1.1",
-    "react-scripts": "1.0.17"
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-scripts": "^1.1.1"
   },
   "devDependencies": {
     "enzyme": "^3.3.0",

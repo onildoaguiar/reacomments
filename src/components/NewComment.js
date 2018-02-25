@@ -9,8 +9,8 @@ class NewComment extends Component {
             this.props.postNewComment({
                 id: `comm-${timestamp}`,
                 comment: this.refs.comment.value
-            })
-            comment: this.refs.comment.value = '';
+            });
+            this.refs.comment.value = '';
         }
     }
 

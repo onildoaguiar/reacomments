@@ -7,18 +7,13 @@ describe('<App/>', () => {
     syncState: jest.fn()
   }
 
-  it('renders without crashing', () => {
+  it('should renders without crashing', () => {
     const wrapper = shallow(<App base={base} />);
   });
 
   it('should have .App class', () => {
     const wrapper = shallow(<App base={base} />);
     expect(wrapper.is('.App')).toBe(true);
-  });
-
-  it('should shows comments', () => {
-    const wrapper = shallow(<App base={base} />);
-    expect(wrapper.find('Comments').length).toBe(1);
   });
 
   it('should shows new comment', () => {

@@ -12,7 +12,7 @@ class App extends Component {
     super(props);
 
     this.state = {
-      comments: []
+      comments: {}
     }
 
     this.refComments = this.props.base.syncState('comments', {
@@ -22,8 +22,8 @@ class App extends Component {
   }
 
   postNewComment(comment) {
-    const comments = this.state.comments;
-    comments.push(comment)
+    const comments = { ...this.state.comments };
+    comments[comment.id] = comment;
 
     this.setState({ comments })
   }
@@ -33,7 +33,7 @@ class App extends Component {
       <div className="App">
         <ReactHeader />
         <div className="container">
-          <h1 className="App-title">System of comments</h1>
+          <h1 className="App-title">Reacomments</h1>
           <NewComment postNewComment={this.postNewComment.bind(this)} />
           <Comments comments={this.state.comments} />
         </div>

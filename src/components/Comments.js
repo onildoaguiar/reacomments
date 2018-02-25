@@ -1,21 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Comment from './Comment';
 
-class Comments extends Component {
-
-    renderComment(comment) {
-        return (
-            <Comment key={comment.id} comment={comment} />
-        );
-    }
-
-    render() {
-        return (
-            this.props.comments.map(comment =>
-                this.renderComment(comment)
-            )
-        );
-    }
+// Functional stateless component
+export default (props) => {
+    return (
+        Object.keys(props.comments).map(key =>
+            <Comment key={key} comment={props.comments[key].comment} />
+        )
+    );
 }
-
-export default Comments;

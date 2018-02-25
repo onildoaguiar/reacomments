@@ -12,6 +12,6 @@ describe('<Comments />', () => {
         const wrapper = mount(<Comments comments={comments} />);
 
         expect(wrapper.length).toBe(1);
-        expect(wrapper.find('Comment').length).toBe(2);
+        expect(wrapper.find('.well').length).toBe(2);
     });
 });
