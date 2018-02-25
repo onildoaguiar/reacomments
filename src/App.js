@@ -58,7 +58,7 @@ class App extends Component {
               <button onClick={() => this.auth('facebook')}>Sign in with Facebook to comment</button>
             </div>
           }
-          <Comments comments={this.state.comments} />
+          {this.state.isLoggedIn && <Comments comments={this.state.comments} />}
         </div>
       </div>
     );
