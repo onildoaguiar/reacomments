@@ -1,5 +1,4 @@
 .App {
-  text-align: center;
 }
 
 .row{
@@ -10,21 +9,35 @@
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
+  text-align: center;
 }
 
 .App-header {
   background-color: #222;
   height: 100px;
-  padding: 20px;
+  padding: 15px;
   color: white;
+  text-align: center;
 }
 
 .App-title {
   font-size: 1.5em;
+  text-align: center;
 }
 
 .App-intro {
   font-size: large;
+  text-align: center;
+}
+
+.media-object {
+  width: 60px;
+}
+
+.media-heading
+{
+  font-size: 1.2em;
+  font-weight: bold;
 }
 
 @keyframes App-logo-spin {

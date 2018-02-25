@@ -5,7 +5,7 @@ import Comment from './Comment';
 export default (props) => {
     return (
         Object.keys(props.comments).map(key =>
-            <Comment key={key} comment={props.comments[key].comment} />
+            <Comment key={key} comment={props.comments[key]} />
         )
     );
 }

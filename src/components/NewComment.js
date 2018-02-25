@@ -8,7 +8,12 @@ class NewComment extends Component {
             const timestamp = Date.now();
             this.props.postNewComment({
                 id: `comm-${timestamp}`,
-                comment: this.refs.comment.value
+                comment: this.refs.comment.value,
+                user: {
+                    name: this.props.user.displayName,
+                    uid: this.props.user.uid,
+                    photoURL: this.props.user.photoURL
+                }
             });
             this.refs.comment.value = '';
         }
@@ -16,10 +21,18 @@ class NewComment extends Component {
 
     render() {
         return (
-            <div className="row">
-                <textarea ref="comment" placeholder="Comment!" className="form-control"
-                    onKeyDown={this.handleEnter.bind(this)}>
-                </textarea>
+            <div className="well">
+                <div className="media">
+                    <div className="media-left">
+                        <img alt={this.props.user.name} src={this.props.user.photoURL} className="media-object" />
+                    </div>
+                    <div className="media-body">
+                        <h4 className="media-heading">{this.props.user.name}</h4>
+                        <textarea ref="comment" placeholder="Comment!" className="form-control"
+                            onKeyDown={this.handleEnter.bind(this)}>
+                        </textarea>
+                    </div>
+                </div>
             </div>
         );
     }
