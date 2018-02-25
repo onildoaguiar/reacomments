@@ -44,10 +44,9 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <ReactHeader />
-        <div className="container">
-          <h1 className="App-title">Reacomments</h1>
+      <div>
+        <ReactHeader user={this.state.user} />
+        <div className="app">
           {this.state.isLoggedIn &&
             <div>
               <button onClick={() => this.props.auth.signOut()}>Sign Out</button>
@@ -56,7 +55,7 @@ class App extends Component {
           }
           {!this.state.isLoggedIn &&
             <div className='alert alert-info'>
-              <button onClick={() => this.auth('facebook')}>Entre com o Facebook para comentar.</button>
+              <button onClick={() => this.auth('facebook')}>Sign in with Facebook to comment</button>
             </div>
           }
           <Comments comments={this.state.comments} />
