@@ -21,4 +21,4 @@ https://onildoaguiar.github.io/reacomments/
 ![mobile](./src/resources/screenshots/mobile.png)
 
 # License
-This project is licensed under the MIT License - see the LICENSE.md file for details
+This project is licensed under the MIT License - see the LICENSE.md file for details.
